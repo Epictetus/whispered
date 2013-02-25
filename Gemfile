@@ -26,6 +26,9 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'pit', :require => false
+  gem 'capistrano', :require => false
+  gem 'capistrano_colors', :require => false
   gem 'spring'
   gem 'sextant'
   gem 'forgery'
@@ -33,5 +36,5 @@ group :development, :test do
 end
 
 group :production do
-  gem 'puma'
+  gem 'puma', :github => 'puma/puma'
 end
